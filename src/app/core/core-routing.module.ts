@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'kimimo', loadChildren: () => import('../kimimo/kimimo-routing.module').then(mod => mod.KimimoRoutingModule)}
+  {path: 'kimimo', loadChildren: () => import('../kimimo/kimimo.module').then(mod => mod.KimimoModule)}
 ];
 
 @NgModule({
