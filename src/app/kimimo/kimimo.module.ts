@@ -6,13 +6,15 @@ import { ProdutoListComponent } from './components/produto-list/produto-list.com
 import { ProdutoDetailComponent } from './components/produto-detail/produto-detail.component';
 import { ProdutoComponent } from './containers/produto/produto.component';
 import { ProdutosComponent } from './containers/produtos/produtos.component';
+import {SharedModule} from '../core/shared/shared.module';
 
 
 @NgModule({
   declarations: [ProdutoListComponent, ProdutoDetailComponent, ProdutoComponent, ProdutosComponent],
   imports: [
     CommonModule,
-    KimimoRoutingModule
+    KimimoRoutingModule,
+    SharedModule,
   ]
 })
 export class KimimoModule { }
