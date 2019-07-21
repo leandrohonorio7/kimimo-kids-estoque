@@ -1,0 +1,7 @@
+{
+  "appId": "com.kimimokidsappestoque",
+  "appName": "KimimoKids",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

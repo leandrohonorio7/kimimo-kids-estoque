@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {KimimoListComponent} from './containers/kimimo-list/kimimo-list.component';
-import {KimimoDetailComponent} from './containers/kimimo-detail/kimimo-detail.component';
+import {ProdutosComponent} from './containers/produtos/produtos.component';
+import {ProdutoComponent} from './containers/produto/produto.component';
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'list'},
-  {path: 'list', component: KimimoListComponent},
-  {path: 'detail', component: KimimoDetailComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'produtos'},
+  {path: 'produtos', component: ProdutosComponent},
+  {path: 'produto', component: ProdutoComponent},
 ];
 
 @NgModule({
