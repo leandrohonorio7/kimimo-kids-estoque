@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>home works! \\o/ \\o/ \\o/</p>\n"
+module.exports = "<p>home works! \\o/ \\o/ \\o/</p>\r\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<p>home works! \\o/ \\o/ \\o/</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container fxFlexFill>\n    <mat-sidenav  mode=\"over\" #sidenav>\n      <mat-list>\n        <mat-list-item routerLink=\"/core/layout/home\" (click)=\"sidenav.close()\">\n            <mat-icon>home</mat-icon>Home\n        </mat-list-item>\n        <mat-list-item routerLink=\"/core/layout/kimimo\" (click)=\"sidenav.close()\">\n            <mat-icon>view_list</mat-icon>Lista\n        </mat-list-item>\n      </mat-list>\n    </mat-sidenav>\n  <mat-sidenav-content fxFlexFill>\n    <mat-toolbar color=\"primary\">\n      <button mat-icon-button (click)=\"sidenav.open()\">\n        <mat-icon>menu</mat-icon>\n      </button>\n      Kimimo Kids\n    </mat-toolbar>\n    <router-outlet></router-outlet>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container fxFlexFill>\r\n    <mat-sidenav  mode=\"over\" #sidenav>\r\n      <mat-list>\r\n        <mat-list-item routerLink=\"/core/layout/home\" (click)=\"sidenav.close()\">\r\n            <mat-icon>home</mat-icon>Home\r\n        </mat-list-item>\r\n        <mat-list-item routerLink=\"/core/layout/kimimo\" (click)=\"sidenav.close()\">\r\n            <mat-icon>view_list</mat-icon>Lista\r\n        </mat-list-item>\r\n      </mat-list>\r\n    </mat-sidenav>\r\n  <mat-sidenav-content fxFlexFill>\r\n    <mat-toolbar color=\"primary\">\r\n      <button mat-icon-button (click)=\"sidenav.open()\">\r\n        <mat-icon>menu</mat-icon>\r\n      </button>\r\n      Kimimo Kids\r\n    </mat-toolbar>\r\n    <router-outlet></router-outlet>\r\n  </mat-sidenav-content>\r\n</mat-sidenav-container>\r\n"
 
 /***/ }),
 
@@ -515,7 +515,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\clayton.chagas\kimimo-kids-estoque\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Desenvolvimento\Senac\kimimo-kids-estoque\src\main.ts */"./src/main.ts");
 
 
 /***/ })

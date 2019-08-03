@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>kimimo-detail works!</p>\n"
+module.exports = "<mat-cat >\r\n  <h1>kimimo-detail works!</h1>\r\n</mat-cat>\r\n\r\n"
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = "<p>kimimo-detail works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>kimimo-list works!</p>\n"
+module.exports = "<mat-list>\r\n  <mat-list-item routerLink=\"/core/layout/kimimo/produto\">\r\n    <mat-icon>info</mat-icon>Item 1\r\n  </mat-list-item>\r\n  <mat-list-item routerLink=\"/core/layout/kimimo/produto\" >\r\n    <mat-icon>info</mat-icon>Item 2\r\n  </mat-list-item>\r\n  <mat-list-item routerLink=\"/core/layout/kimimo/produto\" >\r\n    <mat-icon>info</mat-icon>Item 3\r\n  </mat-list-item>\r\n</mat-list>\r\n"
 
 /***/ }),
 
@@ -29,7 +29,7 @@ module.exports = "<p>kimimo-list works!</p>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-produto-detail></app-produto-detail>\n"
+module.exports = "<app-produto-detail></app-produto-detail>\r\n"
 
 /***/ }),
 
@@ -40,7 +40,7 @@ module.exports = "<app-produto-detail></app-produto-detail>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card>\n  <app-produto-list></app-produto-list>\n</mat-card>\n"
+module.exports = "<div class=\"container\" fxLayout=\"column\" fxLayoutAlign=\"start\">\r\n  <mat-card>\r\n    <mat-card-header>\r\n      <mat-card-title>Meus Produtos</mat-card-title>\r\n    </mat-card-header>\r\n    <mat-card-content>\r\n      <app-produto-list></app-produto-list>\r\n    </mat-card-content>\r\n    <mat-card-actions>\r\n      <button mat-button routerLink=\"../produtos\">Voltar</button>\r\n    </mat-card-actions>\r\n  </mat-card>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -177,7 +177,7 @@ ProdutoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2tpbWltby9jb250YWluZXJzL3Byb2R1dG9zL3Byb2R1dG9zLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "div.container {\n  padding: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAva2ltaW1vL2NvbnRhaW5lcnMvcHJvZHV0b3MvRDpcXERlc2Vudm9sdmltZW50b1xcU2VuYWNcXGtpbWltby1raWRzLWVzdG9xdWUvc3JjXFxhcHBcXGtpbWltb1xcY29udGFpbmVyc1xccHJvZHV0b3NcXHByb2R1dG9zLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9raW1pbW8vY29udGFpbmVycy9wcm9kdXRvcy9wcm9kdXRvcy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7QUNDRiIsImZpbGUiOiJzcmMvYXBwL2tpbWltby9jb250YWluZXJzL3Byb2R1dG9zL3Byb2R1dG9zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lcntcclxuICBwYWRkaW5nOiAxMHB4O1xyXG59XHJcbiIsImRpdi5jb250YWluZXIge1xuICBwYWRkaW5nOiAxMHB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -268,6 +268,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_produto_detail_produto_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/produto-detail/produto-detail.component */ "./src/app/kimimo/components/produto-detail/produto-detail.component.ts");
 /* harmony import */ var _containers_produto_produto_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./containers/produto/produto.component */ "./src/app/kimimo/containers/produto/produto.component.ts");
 /* harmony import */ var _containers_produtos_produtos_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./containers/produtos/produtos.component */ "./src/app/kimimo/containers/produtos/produtos.component.ts");
+/* harmony import */ var _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../core/shared/shared.module */ "./src/app/core/shared/shared.module.ts");
+
 
 
 
@@ -283,7 +285,8 @@ KimimoModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         declarations: [_components_produto_list_produto_list_component__WEBPACK_IMPORTED_MODULE_4__["ProdutoListComponent"], _components_produto_detail_produto_detail_component__WEBPACK_IMPORTED_MODULE_5__["ProdutoDetailComponent"], _containers_produto_produto_component__WEBPACK_IMPORTED_MODULE_6__["ProdutoComponent"], _containers_produtos_produtos_component__WEBPACK_IMPORTED_MODULE_7__["ProdutosComponent"]],
         imports: [
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _kimimo_routing_module__WEBPACK_IMPORTED_MODULE_3__["KimimoRoutingModule"]
+            _kimimo_routing_module__WEBPACK_IMPORTED_MODULE_3__["KimimoRoutingModule"],
+            _core_shared_shared_module__WEBPACK_IMPORTED_MODULE_8__["SharedModule"],
         ]
     })
 ], KimimoModule);
