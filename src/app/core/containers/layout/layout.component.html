@@ -1,5 +1,5 @@
 <mat-sidenav-container fxFlexFill>
-    <mat-sidenav  mode="over" #sidenav>
+    <mat-sidenav  mode="push" #sidenav>
       <mat-list>
         <mat-list-item routerLink="/core/layout/home" (click)="sidenav.close()">
             <mat-icon>home</mat-icon>Home
@@ -16,6 +16,7 @@
       </button>
       Kimimo Kids
     </mat-toolbar>
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

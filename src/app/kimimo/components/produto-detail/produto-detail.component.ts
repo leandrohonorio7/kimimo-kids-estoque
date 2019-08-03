@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Produto} from '../../model/produto.model';
+import {Action} from '@ngrx/store';
+import {unselectProduto} from '../../store/actions/produtos.actions';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-produto-detail',
@@ -7,8 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoDetailComponent implements OnInit {
 
-  constructor() { }
+  produtoForm = this.fb.group(
+    {
+      id: [''],
+      name: [''],
+      value: [''],
+      quantity: [''],
+      // sizes: this.fb.group({
+      //     size: [''],
+      //   }
+      // )
+    }
+  );
 
-  ngOnInit() {}
+  @Input()
+  set produto(produto: Produto) {
+    this.produtoForm.patchValue(produto);
+  }
+
+  @Output()
+  actionEmitter = new EventEmitter<Action>();
+
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {
+  }
+
+  unselect(produto: Produto) {
+    this.actionEmitter.emit(unselectProduto());
+  }
 
 }

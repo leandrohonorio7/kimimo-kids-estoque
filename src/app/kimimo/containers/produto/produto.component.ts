@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {Produto} from '../../model/produto.model';
+import {Action, select, Store} from '@ngrx/store';
+import {ProdutosStatus} from '../../store/reducers/produtos.reduce';
+import {getSelectProdutos} from '../../store/selectors/produtos.selectors';
 
 @Component({
   selector: 'app-produto',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoComponent implements OnInit {
 
-  constructor() { }
+  produto$: Observable<Produto>;
+
+  constructor(private store: Store<ProdutosStatus>) {  }
 
   ngOnInit() {
+    this.produto$ = this.store.pipe(select(getSelectProdutos));
+  }
+  dispatch(action: Action) {
+    this.store.dispatch(action);
   }
 
 }

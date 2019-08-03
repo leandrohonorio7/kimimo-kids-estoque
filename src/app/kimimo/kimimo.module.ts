@@ -7,6 +7,10 @@ import { ProdutoDetailComponent } from './components/produto-detail/produto-deta
 import { ProdutoComponent } from './containers/produto/produto.component';
 import { ProdutosComponent } from './containers/produtos/produtos.component';
 import {SharedModule} from '../core/shared/shared.module';
+import {StoreModule} from '@ngrx/store';
+import {produtoReducer} from './store/reducers/global.reducer';
+import {MatInputModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +19,9 @@ import {SharedModule} from '../core/shared/shared.module';
     CommonModule,
     KimimoRoutingModule,
     SharedModule,
+    StoreModule.forFeature('produto', produtoReducer),
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class KimimoModule { }
