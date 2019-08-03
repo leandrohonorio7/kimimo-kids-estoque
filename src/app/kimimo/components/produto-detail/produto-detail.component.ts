@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Produto} from '../../model/produto.model';
 import {Action} from '@ngrx/store';
-import {unselectProduto} from '../../store/actions/produtos.actions';
+import {unselectProduto, updateProduto} from '../../store/actions/produtos.actions';
 import {FormBuilder} from '@angular/forms';
 
 @Component({
@@ -39,6 +39,10 @@ export class ProdutoDetailComponent implements OnInit {
 
   unselect(produto: Produto) {
     this.actionEmitter.emit(unselectProduto());
+  }
+
+  update() {
+    this.actionEmitter.emit(updateProduto({produto: this.produtoForm.value}));
   }
 
 }
