@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kimimo-kids": {
+      "hosting": {
+        "kimimo-kids-estoque": [
+          "kimimo-kids"
+        ]
+      }
+    }
+  }
+}

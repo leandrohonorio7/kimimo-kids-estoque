@@ -136,8 +136,13 @@
               "devServerTarget": "kimimo-kids-estoque:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "kimimo-kids-estoque"
 }

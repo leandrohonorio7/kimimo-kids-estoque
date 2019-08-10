@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {KimimoState} from '../../store/reducers/global.reducer';
+import {KimimoState} from '../../store/reducers/feature.reducer';
 import {Action, select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {Produto} from '../../model/produto.model';

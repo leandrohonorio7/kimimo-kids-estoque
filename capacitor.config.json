@@ -1,6 +1,6 @@
 {
-  "appId": "com.example.app",
-  "appName": "App",
+  "appId": "com.kimimokids.app",
+  "appName": "KimimoKids",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www"

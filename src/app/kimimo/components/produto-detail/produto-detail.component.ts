@@ -26,7 +26,9 @@ export class ProdutoDetailComponent implements OnInit {
 
   @Input()
   set produto(produto: Produto) {
-    this.produtoForm.patchValue(produto);
+    if (produto) {
+      this.produtoForm.patchValue(produto);
+    }
   }
 
   @Output()

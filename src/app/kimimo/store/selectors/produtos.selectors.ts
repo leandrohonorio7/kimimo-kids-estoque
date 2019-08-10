@@ -1,6 +1,6 @@
 import {createSelector} from '@ngrx/store';
 import {produtoAdapter} from '../reducers/produtos.reduce';
-import {getProdutoState} from '../reducers/global.reducer';
+import {getProdutoState} from '../reducers/feature.reducer';
 
 export const getProdutosState = createSelector(
   getProdutoState,
