@@ -15,6 +15,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './store/effects/app.effects';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {metaReducers, reducers} from './store/reducers/global.reducers';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {metaReducers, reducers} from './store/reducers/global.reducers';
       serializer: CustomSerializer
     }),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule,
     EffectsModule.forRoot([AppEffects])
   ],

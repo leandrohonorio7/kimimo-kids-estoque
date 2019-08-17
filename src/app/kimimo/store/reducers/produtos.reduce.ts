@@ -11,12 +11,6 @@ export interface ProdutosStatus extends EntityState<Produto> {
   produto?: Produto;
 }
 
-const pog = [
-  {id: '1', name: 'roupa 91'},
-  {id: '2', name: 'roupa 52'},
-  {id: '3', name: 'roupa 3'},
-];
-
 const initailState = produtoAdapter.getInitialState();
 // const initailState = produtoAdapter.addAll(pog, produtoAdapter.getInitialState());
 
