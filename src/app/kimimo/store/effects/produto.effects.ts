@@ -22,10 +22,10 @@ export class ProdutoEffects {
       from(this.firestore.doc(`produtos/${action.produto.id}`).set(action.produto)).pipe(
         concatMap( () => from( [
           navigationTo( {commands: ['core', 'layout', 'kimimo', 'produtos']}),
-          showSnackBar({message: `O item: "${action.produto.name}" foi atualizado.`, config: {}})
+          showSnackBar({message: `THe updated product "${action.produto.name}".`, config: {}})
         ])),
         catchError(() => of(showSnackBar({
-          message: 'Ops, alguma coisa deu errado.', config: {
+          message: 'Ops, something went wrong', config: {
             duration: 5000
           }
         })))
@@ -33,33 +33,35 @@ export class ProdutoEffects {
     ),
   ));
 
-  createBug$ = createEffect(() => this.actions$.pipe(
+  createProduto = createEffect(() => this.actions$.pipe(
     ofType(createProduto),
-    exhaustMap((action) => {
-      const id = this.firestore.createId();
-      return from(this.firestore.doc(`bugs/${id}`).set({...action.produto, id})).pipe(
-        concatMap(() => from([
-          navigationTo({commands: ['core', 'layout', 'kimimo', 'produtos']}),
-          showSnackBar({message: `${action.produto.name} atualizado`, config: {}})
-        ])),
-        catchError(() => of(showSnackBar({
-          message: 'Deu ruim',
-          config: {duration: 5000}
-        })))
-      )
-    }),
-  ));
+    exhaustMap((action) => from(this.firestore.doc(`produtos/${this.createId()}`).set({
+      id: this.novoId,
+      name: action.produto.name,
+      value: action.produto.value,
+      quantity: action.produto.quantity
+    })).pipe(
+      concatMap(() => from( [
+        navigationTo({commands: ['core', 'layout', 'kimimo', 'produtos']}),
+        showSnackBar({message: `Created new product`, config: {}})
+      ])),
+      catchError(() => of(showSnackBar({message: 'Ops, something went wrong', config: {
+          duration: 5000
+        }})))
+    ))
+    )
+  );
 
-  deleteBug$ = createEffect(() => this.actions$.pipe(
+  deleteProduto = createEffect(() => this.actions$.pipe(
     ofType(deleteProduto),
     exhaustMap((action) =>
       from(this.firestore.doc(`produtos/${action.id}`).delete()).pipe(
         concatMap(() => from([
-          navigationTo({commands: ['core', 'layout', 'insects']}),
-          showSnackBar({message: `Inseto deletado`, config: {}})
+          navigationTo({commands: ['core', 'layout', 'kimimo', 'produtos']}),
+          showSnackBar({message: `Product removed`, config: {}})
         ])),
         catchError(() => of(showSnackBar({
-          message: 'Deu ruim',
+          message: 'Ops, something went wrong',
           config: {duration: 5000}
         })))
       )
@@ -67,4 +69,10 @@ export class ProdutoEffects {
   ));
 
   constructor(private actions$: Actions, private firestore: AngularFirestore) {}
+
+  novoId: string;
+  private createId() {
+    this.novoId = this.firestore.createId();
+    return this.novoId;
+  }
 }

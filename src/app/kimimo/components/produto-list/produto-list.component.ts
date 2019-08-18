@@ -21,7 +21,7 @@ export class ProdutoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  select(produto: Produto){
+  select(produto: Produto) {
     this.actionEmitter.emit(selectProduto({produto}));
   }
 }

@@ -2,31 +2,31 @@ import {createAction, props} from '@ngrx/store';
 import {Produto} from '../../model/produto.model';
 
 export const updateProdutoList = createAction(
-  '[Produto] Update produto List',
+  '[Product] Update product list',
   props<{produtos: Produto[]}>()
 );
 
 export const selectProduto = createAction(
-  '[Produto] Select produto',
+  '[Product] Select product',
   props<{produto: Produto}>()
 );
 
 export const unselectProduto = createAction(
-  '[Produto] Unselect produto',
+  '[Product] Unselect product',
 );
 
 export const createProduto = createAction(
-  '[Produto] Create produto',
+  '[Product] Create product',
   props<{produto: Produto}>()
 );
 
 export const updateProduto = createAction(
-  '[Produto] Update produto',
+  '[Product] Update product',
   props<{produto: Produto}>()
 );
 
 export const deleteProduto = createAction(
-  '[Produto] Delete produto',
+  '[Product] Delete product',
   props<{id: string}>()
 );
 

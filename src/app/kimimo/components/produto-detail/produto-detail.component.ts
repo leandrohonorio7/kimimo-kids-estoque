@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Produto} from '../../model/produto.model';
 import {Action} from '@ngrx/store';
-import {unselectProduto, updateProduto} from '../../store/actions/produtos.actions';
+import {createProduto, deleteProduto, unselectProduto, updateProduto} from '../../store/actions/produtos.actions';
 import {FormBuilder} from '@angular/forms';
 
 @Component({
@@ -39,12 +39,19 @@ export class ProdutoDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  unselect(produto: Produto) {
+  unselect() {
     this.actionEmitter.emit(unselectProduto());
   }
 
+  salvar() {
+      this.actionEmitter.emit(createProduto({produto: this.produtoForm.value}));
+  }
   update() {
     this.actionEmitter.emit(updateProduto({produto: this.produtoForm.value}));
+  }
+
+  delete() {
+    this.actionEmitter.emit(deleteProduto({id: this.produtoForm.get('id').value}));
   }
 
 }

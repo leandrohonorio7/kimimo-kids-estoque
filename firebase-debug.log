@@ -1,0 +1,54 @@
+[debug] [2019-08-18T04:40:49.125Z] ----------------------------------------------------------------------
+[debug] [2019-08-18T04:40:49.134Z] Command:       C:\Program Files\nodejs\node.exe D:\Desenvolvimento\Senac\kimimo-kids-estoque\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-08-18T04:40:49.135Z] CLI Version:   6.12.0
+[debug] [2019-08-18T04:40:49.135Z] Platform:      win32
+[debug] [2019-08-18T04:40:49.135Z] Node Version:  v10.16.0
+[debug] [2019-08-18T04:40:49.154Z] Time:          Sun Aug 18 2019 01:40:49 GMT-0300 (GMT-03:00)
+[debug] [2019-08-18T04:40:49.154Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-18T04:40:49.222Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-18T04:40:49.223Z] > authorizing via signed-in user
+[debug] [2019-08-18T04:40:49.224Z] [iam] checking project kimimo-kids for permissions ["firebase.projects.get"]
+[debug] [2019-08-18T04:40:49.230Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-08-18T04:40:49.231Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-08-18T04:40:49.603Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-18T04:40:49.621Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/kimimo-kids:testIamPermissions  
+
+[debug] [2019-08-18T04:40:50.712Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-18T04:40:50.716Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/kimimo-kids  
+ 
+[debug] [2019-08-18T04:40:51.650Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Desenvolvimento\Senac\kimimo-kids-estoque'...
+[info] 
+[debug] [2019-08-18T04:40:51.658Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/563357809790/clients/_:getWebAppConfig  
+ 
+[debug] [2019-08-18T04:40:53.030Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: www
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-08-18T04:44:29.465Z] ----------------------------------------------------------------------
+[debug] [2019-08-18T04:44:29.471Z] Command:       C:\Program Files\nodejs\node.exe D:\Desenvolvimento\Senac\kimimo-kids-estoque\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-08-18T04:44:29.471Z] CLI Version:   6.12.0
+[debug] [2019-08-18T04:44:29.471Z] Platform:      win32
+[debug] [2019-08-18T04:44:29.471Z] Node Version:  v10.16.0
+[debug] [2019-08-18T04:44:29.474Z] Time:          Sun Aug 18 2019 01:44:29 GMT-0300 (GMT-03:00)
+[debug] [2019-08-18T04:44:29.474Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-18T04:44:29.498Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-18T04:44:29.499Z] > authorizing via signed-in user
+[debug] [2019-08-18T04:44:29.499Z] [iam] checking project kimimo-kids for permissions ["firebase.projects.get"]
+[debug] [2019-08-18T04:44:29.503Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/kimimo-kids:testIamPermissions  
+
+[debug] [2019-08-18T04:44:30.639Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-18T04:44:30.644Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/kimimo-kids  
+ 
+[debug] [2019-08-18T04:44:31.563Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\Desenvolvimento\Senac\kimimo-kids-estoque'...
+[info] 
+[debug] [2019-08-18T04:44:31.572Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/563357809790/clients/_:getWebAppConfig  
+ 
+[debug] [2019-08-18T04:44:32.044Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: www
+[info] +  hosting: Local server: http://localhost:5000

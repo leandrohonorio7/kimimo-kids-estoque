@@ -7,7 +7,7 @@
         <mat-list-item routerLink="/core/layout/kimimo" (click)="sidenav.close()">
             <mat-icon>view_list</mat-icon>Lista
         </mat-list-item>
-        <mat-list-item routerLink="/core/layout/login" (click)="sidenav.close()" *ngIf="isUserAuthenticated$ | async; else login">
+        <mat-list-item (click)="logout(); sidenav.close()" *ngIf="isUserAuthenticated$ | async; else login">
           <mat-icon>close</mat-icon>Logout
         </mat-list-item>
         <ng-template #login>
@@ -19,12 +19,11 @@
     </mat-sidenav>
   <mat-sidenav-content fxFlexFill>
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.open()">
+      <button mat-icon-button (click)="sidenav.open()" *ngIf="isUserAuthenticated$ | async;">
         <mat-icon>menu</mat-icon>
       </button>
-      Kimimo Kids
+      <mat-label>Kimimo Kids</mat-label>
     </mat-toolbar>
-
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
